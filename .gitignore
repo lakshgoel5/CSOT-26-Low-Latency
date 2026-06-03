@@ -1,1 +1,8 @@
 PLATFORM.md
+build/
+*.csv
+*.so
+*.o
+cachegrind.out.*
+callgrind.out.*
+perf.data*

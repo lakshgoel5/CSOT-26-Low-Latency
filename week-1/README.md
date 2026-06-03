@@ -85,31 +85,31 @@ Suggested pace: **~5–7 days, ~2 hours/day.** You can compress the reading into
 
 ### Phase 0 — Environment Setup (Day 0, ~30 min)
 
-- [ ] OS: native Linux, dual-boot, or WSL2 (note: WSL2 has limited `perf`).
-- [ ] `g++ --version` ≥ 11 *(or `clang++` ≥ 14)*
-- [ ] `cmake --version` ≥ 3.20
-- [ ] `python3 --version` ≥ 3.8
-- [ ] `git --version` works
-- [ ] `perf --version` works (Linux only)
-- [ ] `valgrind --version` works
-- [ ] Google Benchmark installed (`apt install libbenchmark-dev` or built from source)
-- [ ] `kcachegrind` installed (optional but nice)
-- [ ] Allowed `perf` for non-root use:
+- [x] OS: native Linux, dual-boot, or WSL2 (note: WSL2 has limited `perf`).
+- [x] `g++ --version` ≥ 11 *(or `clang++` ≥ 14)*
+- [x] `cmake --version` ≥ 3.20
+- [x] `python3 --version` ≥ 3.8
+- [x] `git --version` works
+- [x] `perf --version` works (Linux only)
+- [x] `valgrind --version` works
+- [x] Google Benchmark installed (`apt install libbenchmark-dev` or built from source)
+- [x] `kcachegrind` installed (optional but nice)
+- [x] Allowed `perf` for non-root use:
   ```bash
   echo 'kernel.perf_event_paranoid = 1' | sudo tee /etc/sysctl.d/99-perf.conf
   sudo sysctl --system
   ```
-- [ ] Created a fresh Git repo for the project (`csot-quant-platform` or similar) and pushed to GitHub/GitLab.
-- [ ] Added a `.gitignore` for `build/`, `*.csv` (large data files), `*.so`, `*.o`, `cachegrind.out.*`, `callgrind.out.*`, `perf.data*`.
+- [x] Created a fresh Git repo for the project (`csot-quant-platform` or similar) and pushed to GitHub/GitLab.
+- [x] Added a `.gitignore` for `build/`, `*.csv` (large data files), `*.so`, `*.o`, `cachegrind.out.*`, `callgrind.out.*`, `perf.data*`.
 
 ### Phase 1 — Reading (Days 1–2, ~1.5–2 hours)
 
 After each note, write **one sentence** in your own words about what surprised you. Trust me — it cements the idea.
 
-- [ ] [`01-introduction.md`](./01-introduction.md) — latency vs. throughput, memory as a contiguous array
-  - [ ] I can state the difference between p50, p99, and p999 latency.
+- [x] [`01-introduction.md`](./01-introduction.md) — latency vs. throughput, memory as a contiguous array
+  - [x] I can state the difference between p50, p99, and p999 latency.
 - [ ] [`02-memory-model.md`](./02-memory-model.md) — containers, stack vs. heap, allocators
-  - [ ] I know why `std::list` is slower than `std::vector` to iterate.
+  - [x] I know why `std::list` is slower than `std::vector` to iterate.
   - [ ] I can describe what an arena allocator does and why it's fast.
 - [ ] [`03-memory-hierarchy.md`](./03-memory-hierarchy.md) — L1/L2/L3/DRAM, cache lines
   - [ ] I have memorized ~3 latency numbers (L1 hit, DRAM access, network RTT).
